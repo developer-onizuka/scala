@@ -44,3 +44,14 @@ Checking if the standard Scala applications are installed
 $ coursier java --available
 ```
 
+```
+$ scala
+Welcome to Scala 3.2.2 (1.8.0_362, Java OpenJDK 64-Bit Server VM).
+Type in expressions for evaluation. Or try :help.
+                                                                                                                        
+scala> 1+2
+val res0: Int = 3
+                                                                                                                        
+scala>
+```
+
