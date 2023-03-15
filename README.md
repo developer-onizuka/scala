@@ -66,3 +66,8 @@ object HelloWorld {
 $ scala hello.scala 
 Hello World
 ```
+
+```
+$ sudo snap install intellij-idea-community --classic
+$ intellij-idea-community
+```
