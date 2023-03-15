@@ -20,3 +20,27 @@ $ scala-cli --version
 Scala CLI version: 0.2.0
 Scala version (default): 3.2.2
 ```
+```
+$ curl -fL "https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz" | gzip -d > cs
+$ chmod +x cs
+$ ./cs setup
+Checking if a JVM is installed
+Found a JVM installed under /usr/lib/jvm/java-8-openjdk-amd64/jre.
+
+Checking if ~/.local/share/coursier/bin is in PATH
+  Should we add ~/.local/share/coursier/bin to your PATH via ~/.profile? [Y/n] y
+
+Checking if the standard Scala applications are installed
+  Installed ammonite
+  Installed cs
+  Installed coursier
+  Installed scala
+  Installed scalac
+  Installed scala-cli
+  Installed sbt
+  Installed sbtn
+  Installed scalafmt
+  
+$ coursier java --available
+```
+
