@@ -54,4 +54,15 @@ val res0: Int = 3
                                                                                                                         
 scala>
 ```
-
+```
+$ cat hello.scala 
+object HelloWorld {
+  def main(args: Array[String]) :Unit = {
+    println("Hello World")
+  }
+}
+```
+```
+$ scala hello.scala 
+Hello World
+```
