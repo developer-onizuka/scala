@@ -18,6 +18,8 @@ $ ./cs setup -y
 $ sudo snap install intellij-idea-community --classic
 $ intellij-idea-community
 ```
+![scala.png](https://github.com/developer-onizuka/scala/blob/main/scala.png)
+
 
 # 4. Try to use
 ```
