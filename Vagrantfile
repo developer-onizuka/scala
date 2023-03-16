@@ -15,12 +15,14 @@ Vagrant.configure("2") do |config|
     kvm.machine_type = "q35"
   end
 
-  config.vm.provision "shell", inline: <<-SHELL
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
    sudo apt update
    sudo apt install software-properties-common
    sudo apt-add-repository --yes --update ppa:ansible/ansible
    sudo apt install -y ansible
    git clone https://github.com/developer-onizuka/ansible
    ansible-playbook ansible/google-chrome.yaml
+   ansible-playbook ansible/scala.yaml
+   ansible-playbook ansible/vscode.yaml
    SHELL
 end
