@@ -65,6 +65,7 @@ $ sudo docker pull jupyter/all-spark-notebook:spark-3.1.2
 $ sudo docker run -it -p 8888:8888 --rm jupyter/all-spark-notebook:spark-3.1.2
 ```
 # 8. Convert RDD to a DataFrame
+- input
 ```
 // Spark - Dataset and Dataframe
 // How to convert an existing RDD to a DataFrame
@@ -76,6 +77,7 @@ df.show()
 ![spark.png](https://github.com/developer-onizuka/scala/blob/main/spark.png)
 
 # 9. Create DataFrame as a defined Schema
+- input
 ```
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.functions._
