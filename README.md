@@ -1,5 +1,7 @@
 # scala
 
+Scala combines object-oriented and functional programming in one concise, high-level language. Scala's static types help avoid bugs in complex applications, and its JVM and JavaScript runtimes let you build high-performance systems with easy access to huge ecosystems of libraries.<br>
+
 # 1. Install Java
 ```
 $ sudo apt update
@@ -53,18 +55,22 @@ $ cd ansible
 $ ansible-playbook scala.yaml
 ```
 
-# 6. Apache Toree - Scala Notebookpache Toree
+# 6. Scala with Jupyter notebook
+# 6-1. Apache Toree - Scala Notebookpache Toree
 ```
 $ sudo docker pull jupyter/all-spark-notebook:c1b0cf6bf4d6
 $ sudo docker run -it -p 8888:8888 --rm jupyter/all-spark-notebook:c1b0cf6bf4d6
 ```
 
-# 7. spylon-kernel - Scala Notebook
+# 6-2. spylon-kernel - Scala Notebook
 ```
 $ sudo docker pull jupyter/all-spark-notebook:spark-3.1.2
 $ sudo docker run -it -p 8888:8888 --rm jupyter/all-spark-notebook:spark-3.1.2
 ```
-# 8. Convert RDD to a DataFrame
+
+# 6-3. Convert RDD to a DataFrame
+A DataFrame is an object that treats a data file like a database table on Spark. DataFrame has methods such as filter and join, and the API for handling these is the DataFrame API.<br>
+
 - input
 ```
 // Spark - Dataset and Dataframe
@@ -76,7 +82,7 @@ df.show()
 ```
 ![spark.png](https://github.com/developer-onizuka/scala/blob/main/spark.png)
 
-# 9. Create DataFrame as a defined Schema
+# 6-4. Create DataFrame as a defined Schema
 - input
 ```
 import org.apache.spark.sql.types._
