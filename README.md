@@ -74,3 +74,19 @@ val df=dist.toDF()
 df.show()
 ```
 ![spark.png](https://github.com/developer-onizuka/scala/blob/main/spark.png)
+
+# 9. Create DataFrame as a defined Schema
+```
+import org.apache.spark.sql.types._
+import org.apache.spark.sql.functions._
+
+val dataSchema = StructType(Array(
+    StructField("id", IntegerType, true),
+    StructField("name", StringType, true),
+    StructField("price", DoubleType, true),
+    StructField("country", StringType, true)))
+
+val df = spark.read.format("csv").option("header","true").schema(dataSchema).load("fruits.txt")
+df.printSchema()
+df.show()
+```
