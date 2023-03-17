@@ -73,3 +73,4 @@ val dist = sc.parallelize(data)
 val df=dist.toDF()
 df.show()
 ```
+![spark.png](https://github.com/developer-onizuka/scala/blob/main/spark.png)
