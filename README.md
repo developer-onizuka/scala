@@ -139,8 +139,8 @@ id,name,price,country
 df.write.mode("overwrite").saveAsTable("fruitsTable")
 ```
 ```
-val xdf = spark.read.table("fruitsTable");
-xdf.show()
+val xDF = spark.read.table("fruitsTable");
+xDF.show()
 ```
 ```
 +---+------+-----+-----------+
@@ -155,4 +155,19 @@ xdf.show()
 |  7|Orange|11.99|     Israel|
 |  8|Banana|12.99|Philippines|
 +---+------+-----+-----------+
+```
+
+# 6-6. Query for the saved table
+```
+val sqlDF = spark.sql("SELECT name, count(name) FROM fruitsTable GROUP By name")
+sqlDF.show()
+```
+```
++------+-----------+
+|  name|count(name)|
++------+-----------+
+|Orange|          3|
+|Banana|          3|
+| Apple|          2|
++------+-----------+
 ```
