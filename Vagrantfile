@@ -24,5 +24,7 @@ Vagrant.configure("2") do |config|
    ansible-playbook ansible/google-chrome.yaml
    ansible-playbook ansible/scala.yaml
    ansible-playbook ansible/vscode.yaml
+   ansible-playbook ansible/docker.yaml
+   sudo docker pull jupyter/all-spark-notebook:c1b0cf6bf4d6
    SHELL
 end
