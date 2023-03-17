@@ -171,3 +171,18 @@ sqlDF.show()
 | Apple|          2|
 +------+-----------+
 ```
+```
+val sqlDF = spark.sql("SELECT country, count(country) as numOfFruits FROM fruitsTable GROUP By country ORDER BY numOfFruits DESC")
+sqlDF.show()
+```
+```
++-----------+-----------+
+|    country|numOfFruits|
++-----------+-----------+
+|      Japan|          3|
+|        USA|          2|
+|Philippines|          1|
+|     Taiwan|          1|
+|     Israel|          1|
++-----------+-----------+
+```
