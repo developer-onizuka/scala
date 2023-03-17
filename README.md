@@ -53,8 +53,23 @@ $ cd ansible
 $ ansible-playbook scala.yaml
 ```
 
-# 6. Apache Toree
+# 6. Apache Toree - Scala Notebookpache Toree
 ```
 $ sudo docker pull jupyter/all-spark-notebook:c1b0cf6bf4d6
 $ sudo docker run -it -p 8888:8888 --rm jupyter/all-spark-notebook:c1b0cf6bf4d6
+```
+
+# 7. spylon-kernel - Scala Notebook
+```
+$ sudo docker pull jupyter/all-spark-notebook:spark-3.1.2
+$ sudo docker run -it -p 8888:8888 --rm jupyter/all-spark-notebook:spark-3.1.2
+```
+# 8. Convert RDD to a DataFrame
+```
+// Spark - Dataset and Dataframe
+// How to convert an existing RDD to a DataFrame
+val data = Array(1, 2, 3, 4, 5)
+val dist = sc.parallelize(data)
+val df=dist.toDF()
+df.show()
 ```
