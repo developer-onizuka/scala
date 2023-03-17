@@ -133,7 +133,7 @@ id,name,price,country
 8,Banana,12.99,Philippines
 ```
 
-# 6-5. Save as Spark Table
+# 6-5. Save DataFrame as a Spark Table
 - input
 ```
 df.write.mode("overwrite").saveAsTable("fruitsTable")
