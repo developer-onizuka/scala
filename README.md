@@ -110,3 +110,15 @@ root
 |  8|Banana|12.99|Philippines|
 +---+------+-----+-----------+
 ```
+- fruits.txt
+```
+id,name,price,country
+1,Apple,10.99,Japan
+2,Orange,11.99,Japan
+3,Banana,12.99,Japan
+4,Apple,10.99,USA
+5,Orange,11.99,USA
+6,Banana,12.99,Taiwan
+7,Orange,11.99,Israel
+8,Banana,12.99,Philippines
+```
