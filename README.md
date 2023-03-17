@@ -70,6 +70,8 @@ $ sudo docker run -it -p 8888:8888 --rm jupyter/all-spark-notebook:spark-3.1.2
 
 # 6-3. Convert RDD to a DataFrame
 A DataFrame is an object that treats a data file like a database table on Spark. DataFrame has methods such as filter and join, and the API for handling these is the DataFrame API.<br>
+> https://blog.serverworks.co.jp/introducing-pyspark-5 <br>
+![dataframe.png](https://github.com/developer-onizuka/scala/blob/main/dataframe.png)
 
 - input
 ```
