@@ -86,7 +86,7 @@ val dataSchema = StructType(Array(
     StructField("price", DoubleType, true),
     StructField("country", StringType, true)))
 
-val df = spark.read.format("csv").option("header","true").schema(dataSchema).load("fruits.txt")
+val df = spark.read.format("csv").option("header","true").schema(dataSchema).load("fruits.csv")
 df.printSchema()
 df.show()
 ```
@@ -110,7 +110,7 @@ root
 |  8|Banana|12.99|Philippines|
 +---+------+-----+-----------+
 ```
-- fruits.txt
+- fruits.csv
 ```
 id,name,price,country
 1,Apple,10.99,Japan
