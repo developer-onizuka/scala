@@ -132,6 +132,18 @@ id,name,price,country
 7,Orange,11.99,Israel
 8,Banana,12.99,Philippines
 ```
+If you don't specify any schema, then all of column is defined as string as followings:
+```
+val df = spark.read.format("csv").option("header","true").load("fruits.csv")
+```
+```
+root
+ |-- id: string (nullable = true)
+ |-- name: string (nullable = true)
+ |-- price: string (nullable = true)
+ |-- country: string (nullable = true)
+```
+
 
 # 6-5. Save DataFrame as a Spark Table
 - input
