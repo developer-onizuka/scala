@@ -226,6 +226,14 @@ val df = spark.read.format("json").schema(dataSchema).load("fruits.json")
 df.printSchema()
 df.show()
 ```
+```
++---+------+-----+-------+
+| id|  name|price|country|
++---+------+-----+-------+
+|  1| Apple| 5.99|  japan|
+|  2|Orange| 5.99|  japan|
++---+------+-----+-------+
+```
 - fruits.json
 ```
 {"id":1,"name":"Apple","price":5.99,"country":"japan"}
