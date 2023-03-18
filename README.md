@@ -219,3 +219,15 @@ spark.sql("SELECT * FROM fruitsTable").show()
 |  9| Grape| 9.99|     Israel|
 +---+------+-----+-----------+
 ```
+
+# 6-8. Json format
+```
+val df = spark.read.format("json").schema(dataSchema).load("fruits.json")
+df.printSchema()
+df.show()
+```
+- fruits.json
+```
+{"id":1,"name":"Apple","price":5.99,"country":"japan"}
+{"id":2,"name":"Orange","price":5.99,"country":"japan"}
+```
