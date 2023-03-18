@@ -198,3 +198,24 @@ sqlDF.show()
 |     Israel|          1|
 +-----------+-----------+
 ```
+
+# 6-7. Insert a value into the table
+```
+spark.sql("INSERT INTO fruitsTable VALUES (9,'Grape',9.99,'Israel')")
+spark.sql("SELECT * FROM fruitsTable").show()
+```
+```
++---+------+-----+-----------+
+| id|  name|price|    country|
++---+------+-----+-----------+
+|  1| Apple|10.99|      Japan|
+|  2|Orange|11.99|      Japan|
+|  3|Banana|12.99|      Japan|
+|  4| Apple|10.99|        USA|
+|  5|Orange|11.99|        USA|
+|  6|Banana|12.99|     Taiwan|
+|  7|Orange|11.99|     Israel|
+|  8|Banana|12.99|Philippines|
+|  9| Grape| 9.99|     Israel|
++---+------+-----+-----------+
+```
